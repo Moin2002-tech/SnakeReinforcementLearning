@@ -1,0 +1,14 @@
+[
+{
+  "directory": "/home/moinshaikh/CLionProjects/ReinforcementSnake/cmake-build-debug",
+  "command": "/usr/bin/c++ -I/home/moinshaikh/CLionProjects/ReinforcementSnake/libtorch/include -I/home/moinshaikh/CLionProjects/ReinforcementSnake/libtorch/include/torch/csrc/api/include -isystem /home/moinshaikh/vcpkg/installed/x64-linux/include -g -fdiagnostics-color=always -o CMakeFiles/ReinforcementSnake.dir/main.cpp.o -c /home/moinshaikh/CLionProjects/ReinforcementSnake/main.cpp",
+  "file": "/home/moinshaikh/CLionProjects/ReinforcementSnake/main.cpp",
+  "output": "/home/moinshaikh/CLionProjects/ReinforcementSnake/cmake-build-debug/CMakeFiles/ReinforcementSnake.dir/main.cpp.o"
+},
+{
+  "directory": "/home/moinshaikh/CLionProjects/ReinforcementSnake/cmake-build-debug",
+  "command": "/usr/bin/c++ -I/home/moinshaikh/CLionProjects/ReinforcementSnake/libtorch/include -I/home/moinshaikh/CLionProjects/ReinforcementSnake/libtorch/include/torch/csrc/api/include -isystem /home/moinshaikh/vcpkg/installed/x64-linux/include -g -fdiagnostics-color=always -o CMakeFiles/ReinforcementSnake.dir/src/SnakeAI.cpp.o -c /home/moinshaikh/CLionProjects/ReinforcementSnake/src/SnakeAI.cpp",
+  "file": "/home/moinshaikh/CLionProjects/ReinforcementSnake/src/SnakeAI.cpp",
+  "output": "/home/moinshaikh/CLionProjects/ReinforcementSnake/cmake-build-debug/CMakeFiles/ReinforcementSnake.dir/src/SnakeAI.cpp.o"
+}
+]
