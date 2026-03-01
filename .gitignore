@@ -62,7 +62,7 @@ Thumbs.db
 *.rar
 
 # External dependencies (if they're large and should be managed separately)
-# libtorch/  # Uncomment if libtorch should not be in repo
+libtorch/
 
 # CUDA and GPU related
 *.cu.o
