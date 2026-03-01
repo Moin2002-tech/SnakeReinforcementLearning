@@ -1,0 +1,88 @@
+# Build directories
+cmake-build-debug/
+cmake-build-release/
+build/
+out/
+
+# IDE files
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# CMake generated files
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
+*.cmake
+
+# Executables and binaries
+ReinforcementSnake
+*.exe
+*.out
+*.app
+
+# Object files and libraries
+*.o
+*.a
+*.so
+*.dylib
+
+# Model files and training data
+*.pt
+*.pth
+*.pkl
+*.h5
+*.hdf5
+models/
+checkpoints/
+logs/
+tensorboard_logs/
+
+# Temporary files
+*.tmp
+*.temp
+*.log
+*.bak
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Archive files
+*.zip
+*.tar.gz
+*.rar
+
+# External dependencies (if they're large and should be managed separately)
+# libtorch/  # Uncomment if libtorch should not be in repo
+
+# CUDA and GPU related
+*.cu.o
+*.cubin
+
+# Python cache (if using Python scripts)
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints
+
+# PyTorch specific
+*.pth
+runs/
