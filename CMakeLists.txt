@@ -4,8 +4,21 @@ cmake_minimum_required(VERSION 3.22)
 project(ReinforcementSnake LANGUAGES CXX)
 
 set(CMAKE_CXX_STANDARD 17)
-set(TORCH_CUDA_ARCH_LIST "7.5")
-set(CAFFE2_USE_CUDNN 9)
+
+if (MSVC)
+   add_compile_options(/utf-8)
+ endif()
+
+ if (MSVC)
+  # Force the MSVC runtime library to MultiThreadedDLL (/MD) for all configs.
+  # Change to "MultiThreadedDebugDLL" to force /MDd instead.
+  set(CMAKE_MSVC_RUNTIME_LIBRARY "MultiThreadedDLL" CACHE STRING "" FORCE)
+endif()
+
+# Force /MD in Debug (example) to match prebuilt libs
+
+
+set(CMAKE_TOOLCHAIN_FILE "C:/dev/vcpkg/scripts/buildsystems/vcpkg.cmake" CACHE STRING "Vcpkg toolchain")
 
 find_package(SDL3 CONFIG REQUIRED)
 find_package(glm CONFIG REQUIRED)
@@ -40,30 +53,21 @@ target_include_directories(ReinforcementSnake PRIVATE
 target_link_libraries(ReinforcementSnake PRIVATE
 
 
-        -Wl,--no-as-needed
-        -Wl,--whole-archive
-        "${CMAKE_SOURCE_DIR}/libtorch/lib/libtorch_cuda.so"
-        "${CMAKE_SOURCE_DIR}/libtorch/lib/libtorch_cpu.so"
-        "${CMAKE_SOURCE_DIR}/libtorch/lib/libtorch.so"
-        -Wl,--no-whole-archive
 
-        "${CMAKE_SOURCE_DIR}/libtorch/lib/libc10_cuda.so"
-        "${CMAKE_SOURCE_DIR}/libtorch/lib/libc10.so"
+        
+        
+        "${CMAKE_SOURCE_DIR}/libtorch/lib/torch.lib"
+        "${CMAKE_SOURCE_DIR}/libtorch/lib/torch_cpu.lib"
+        "${CMAKE_SOURCE_DIR}/libtorch/lib/c10.lib"
+        "${CMAKE_SOURCE_DIR}/libtorch/lib/fmt.lib"
 
-        # 1. CUDA Runtime (from your toolkit)
-        "/usr/local/cuda/lib64/libcudart.so"
+      
+   
 
-        # 2. CUDA Driver (The one usually missing - found in system libs)
-        "/usr/lib/x86_64-linux-gnu/libcuda.so.1"
 
-        # 3. NVRTC (Compiler library)
-        "/usr/local/cuda/lib64/libnvrtc.so"
 
-        ${OpenCV_LIBS}
-        # System base libs
-        pthread
-        dl
-        m
+  
+
 )
 
 
