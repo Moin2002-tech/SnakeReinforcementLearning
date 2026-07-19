@@ -578,3 +578,6 @@ src/
 ---
 
 *This architecture document provides a comprehensive overview of the Reinforcement Learning Snake implementation, covering the mathematical foundations, algorithmic details, and engineering choices.*
+
+#TODO 
+load pre trained data.
